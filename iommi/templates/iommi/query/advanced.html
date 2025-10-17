@@ -18,7 +18,9 @@
                 <h3>{% blocktrans %}Available fields{% endblocktrans %}</h3>
                 <ul style="column-count: 3;">
                     {% for name in query.filters %}
-                        <li><code>{{ name }}</code></li>
+                        {% if "spr_" not in name and "pred_" not in name %}
+                            <li><code>{{ name }}</code></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
