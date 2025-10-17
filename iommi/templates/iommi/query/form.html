@@ -2,9 +2,11 @@
 <div id="iommi_{{ query.iommi_dunder_path }}">
     <form{{ query.form.attrs }}>
 
+        {% comment %}
         {% if query.advanced %}
             {{ query.advanced }}
         {% endif %}
+        {% endcomment %}
 
         {% comment %}
         {{ query.form_container.iommi_open_tag }}
