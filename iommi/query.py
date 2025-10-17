@@ -675,7 +675,6 @@ class Query(Part):
         form_container__call_target=Fragment,
         form_container__tag='span',
         form_container__attrs__class__iommi_query_form_simple=True,
-        form_container__attrs__class__hidden=True,
         advanced__call_target=Advanced,
     )
     def __init__(self, **kwargs):

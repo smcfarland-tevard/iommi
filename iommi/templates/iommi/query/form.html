@@ -6,9 +6,11 @@
             {{ query.advanced }}
         {% endif %}
 
+        {% comment %}
         {{ query.form_container.iommi_open_tag }}
             {{ query.form.render_fields }}
         {{ query.form_container.iommi_close_tag }}
+        {% endcomment %}
 
         {{ query.form.errors }}
 
