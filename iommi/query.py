@@ -614,7 +614,7 @@ class Advanced(Fragment):
     @with_defaults(
         toggle__call_target=Action,
         toggle__attrs__href='#',
-        toggle__attrs__class__iommi_query_toggle_simple_mode=False,
+        toggle__attrs__class__iommi_query_toggle_simple_mode=True,
         toggle__attrs={'data-advanced-mode': 'simple'},
     )
     def __init__(self, **kwargs):
@@ -674,7 +674,7 @@ class Query(Part):
         form__attrs={'data-iommi-errors': lambda query, **_: query.endpoints.errors.iommi_path},
         form_container__call_target=Fragment,
         form_container__tag='span',
-        form_container__attrs__class__iommi_query_form_simple=False,
+        form_container__attrs__class__iommi_query_form_simple=True,
         advanced__call_target=Advanced,
     )
     def __init__(self, **kwargs):

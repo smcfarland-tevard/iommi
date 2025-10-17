@@ -1,7 +1,7 @@
 {% load i18n %}
 {{ query.advanced.toggle }}
 <div style="width: 100%">
-    <div class="iommi_query_form_advanced" style="display: none">
+    <div class="iommi_query_form_advanced">
         <label for="iommi_{{ query.iommi_dunder_path }}_query">{% blocktrans %}Search query{% endblocktrans %}:</label>
         <input id="iommi_{{ query.iommi_dunder_path }}_query" name="{{ query.get_advanced_query_param }}" type="text" style="width:70%" data-query="{{ query.query_advanced_value }}"/>
 
