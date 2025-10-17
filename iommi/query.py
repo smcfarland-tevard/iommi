@@ -621,15 +621,15 @@ class Advanced(Fragment):
         super(Advanced, self).__init__(**kwargs)
 
     def on_refine_done(self):
-        # self.toggle = self.toggle(
-        #     _name='toggle',
-        #     display_name=gettext_lazy('Switch to advanced search'),
-        # ).refine_done(parent=self)
+        self.toggle = self.toggle(
+            _name='toggle',
+            display_name=gettext_lazy('Switch to advanced search'),
+        ).refine_done(parent=self)
         super(Advanced, self).on_refine_done()
 
     def on_bind(self) -> None:
         super(Advanced, self).on_bind()
-        self.toggle = self.toggle.bind(parent=self)
+        # self.toggle = self.toggle.bind(parent=self)
 
 
 @declarative(Filter, '_filters_dict', add_init_kwargs=False)
