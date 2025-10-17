@@ -26,9 +26,9 @@ class IommiBase {
 
         const SELF = this;
         this.initAjaxPaginationAndSorting();
-        document.querySelectorAll('.iommi_filter').forEach(
-            form => SELF.enhanceFilterForm(form)
-        );
+        // document.querySelectorAll('.iommi_filter').forEach(
+        //     form => SELF.enhanceFilterForm(form)
+        // );
         document.querySelectorAll('.iommi-table-container').forEach(
             container => SELF.enhanceTableContainer(container)
         );
