@@ -620,12 +620,12 @@ class Advanced(Fragment):
     def __init__(self, **kwargs):
         super(Advanced, self).__init__(**kwargs)
 
-    def on_refine_done(self):
-        self.toggle = self.toggle(
-            _name='toggle',
-            display_name=gettext_lazy('Switch to advanced search'),
-        ).refine_done(parent=self)
-        super(Advanced, self).on_refine_done()
+    # def on_refine_done(self):
+    #     self.toggle = self.toggle(
+    #         _name='toggle',
+    #         display_name=gettext_lazy('Switch to advanced search'),
+    #     ).refine_done(parent=self)
+    #     super(Advanced, self).on_refine_done()
 
     def on_bind(self) -> None:
         super(Advanced, self).on_bind()
