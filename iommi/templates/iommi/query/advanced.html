@@ -16,7 +16,7 @@
         <div class="iommi_query_help" style="display: none">
             <div class="iommi_query_available_fields">
                 <h3>{% blocktrans %}Available fields{% endblocktrans %}</h3>
-                <ul>
+                <ul style="column-count: 3;">
                     {% for name in query.filters %}
                         <li><code>{{ name }}</code></li>
                     {% endfor %}
