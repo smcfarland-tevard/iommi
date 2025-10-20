@@ -22,10 +22,10 @@
                             <li><code>{{ name }}</code></li>
                         {% endif %}
                     {% endfor %}
-                    {% if any(['pred_' in name for name in query.filters]) %}
+                    {% if 'pred_arg' in query.filters %}
                         <li><code>pred_X (e.g. "pred_Arg>50")</code></li>
                     {% endif %}
-                    {% if any(['spr_' in name for name in query.filters]) %}
+                    {% if 'spr_1' query.filters %}
                         <li><code>spr_X (e.g. "spr_17a=T")</code></li>
                     {% endif %}
                 </ul>
