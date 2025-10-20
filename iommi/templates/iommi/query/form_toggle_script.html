@@ -32,32 +32,6 @@
         //     }
         //     return false;
         // }
-        function toggle_simple_advanced() {
-            var toggle_simple_mode = base.getElementsByClassName("iommi_query_toggle_simple_mode")[0];
-            var simple = base.getElementsByClassName("iommi_query_form_simple")[0];
-            var adv = base.getElementsByClassName("iommi_query_form_advanced")[0];
-            if (toggle_simple_mode.getAttribute('data-advanced-mode') === 'simple') {
-                q.value = q.getAttribute('data-query');
-                toggle_simple_mode.setAttribute('data-advanced-mode', 'advanced');
-                adv.style.display = '';
-                simple.style.display = 'none';
-                toggle_simple_mode.innerHTML = '{% blocktrans %}Switch to basic search{% endblocktrans %}';
-                help.style.display = '';
-            }
-            else {
-                q.setAttribute('data-query', q.value);
-                q.value = '';
-                toggle_simple_mode.setAttribute('data-advanced-mode', 'simple');
-                adv.style.display = 'none';
-                simple.style.display = '';
-                toggle_simple_mode.innerHTML = '{% blocktrans %}Switch to advanced search{% endblocktrans %}';
-                help.style.display = 'none';
-                if (help.style.display === '') {
-                    toggle_help();
-                }
-            }
-            return false;
-        }
 
         function toggle_help() {
             var icon = help.querySelector('i');

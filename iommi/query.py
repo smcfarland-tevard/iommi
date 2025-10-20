@@ -630,7 +630,6 @@ class Advanced(Fragment):
     def on_bind(self) -> None:
         super(Advanced, self).on_bind()
         # self.toggle = self.toggle.bind(parent=self)
-        self.toggle = self.toggle.bind(parent=self)
 
 
 @declarative(Filter, '_filters_dict', add_init_kwargs=False)
