@@ -23,9 +23,9 @@
                         {% endif %}
                     {% endfor %}
                     {% if 'pred_arg' in query.filters %}
-                        <li><code>pred_X (e.g. "pred_Arg>50")</code></li>
+                        <li><code>pred_X (e.g. "pred_arg>50")</code></li>
                     {% endif %}
-                    {% if 'spr_1' query.filters %}
+                    {% if 'spr_1' in query.filters %}
                         <li><code>spr_X (e.g. "spr_17a=T")</code></li>
                     {% endif %}
                 </ul>
