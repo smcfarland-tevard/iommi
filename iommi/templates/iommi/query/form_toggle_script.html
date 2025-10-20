@@ -3,7 +3,6 @@
     function iommi_register_query_toggles(query_iommi_dunder_path) {
         var base = document.getElementById('iommi_' + query_iommi_dunder_path);
         // var q = document.getElementById('iommi_' + query_iommi_dunder_path + '_query');
-        var q = document.getElementById('iommi_' + query_iommi_dunder_path + '_query');
         var help = base.getElementsByClassName('iommi_query_toggle_help')[0];
 
         // function toggle_simple_advanced() {
@@ -55,11 +54,11 @@
         // }
 
         // base.getElementsByClassName("iommi_query_toggle_simple_mode")[0].addEventListener('click', toggle_simple_advanced);
-        if (q.getAttribute('data-query') !== '') {
-            toggle_simple_advanced();
-        }
+        // if (q.getAttribute('data-query') !== '') {
+        //     toggle_simple_advanced();
+        // }
 
-        base.getElementsByClassName("iommi_query_toggle_simple_mode")[0].addEventListener('click', toggle_simple_advanced);
+        // base.getElementsByClassName("iommi_query_toggle_simple_mode")[0].addEventListener('click', toggle_simple_advanced);
         help.addEventListener('click', toggle_help);
     }
 </script>
