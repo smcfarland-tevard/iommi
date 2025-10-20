@@ -22,8 +22,12 @@
                             <li><code>{{ name }}</code></li>
                         {% endif %}
                     {% endfor %}
-                    <li><code>spr_X (e.g. "spr_17a=T")</code></li>
-                    <li><code>pred_X (e.g. "pred_Arg>50")</code></li>
+                    {% if any(['pred_' in name for name in query.filters]) %}
+                        <li><code>pred_X (e.g. "pred_Arg>50")</code></li>
+                    {% endif %}
+                    {% if any(['spr_' in name for name in query.filters]) %}
+                        <li><code>spr_X (e.g. "spr_17a=T")</code></li>
+                    {% endif %}
                 </ul>
             </div>
             <div class="iommi_query_available_query_commands">
