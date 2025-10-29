@@ -21,13 +21,17 @@
                         {% if "spr_" not in name and "pred_" not in name %}
                             <li><code>{{ name }}</code></li>
                         {% endif %}
+                        {% if 'pred_arg' == name %}
+                            <li><code>pred_X (e.g. "pred_arg>50")</code></li>
+                        {% endif %}
+                        {% if 'spr_1' == name %}
+                            <li><code>spr_X (e.g. "spr_17a=T")</code></li>
+                        {% endif %}
+                        {% if 'taxa_kingdom_list' == name %}
+                            <li><code>taxa_X_list (e.g. "taxa_class_list:Mammalia")</code></li>
+                        {% endif %}
                     {% endfor %}
-                    {% if 'pred_arg' in query.filters %}
-                        <li><code>pred_X (e.g. "pred_arg>50")</code></li>
-                    {% endif %}
-                    {% if 'spr_1' in query.filters %}
-                        <li><code>spr_X (e.g. "spr_17a=T")</code></li>
-                    {% endif %}
+                    
                 </ul>
             </div>
             <div class="iommi_query_available_query_commands">
