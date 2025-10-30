@@ -111,6 +111,7 @@ class IommiBase {
         element.iommi.abortController = newAbortController;
         if (this.ajaxTimeout !== null) {
             setTimeout(() => newAbortController.abort(), this.ajaxTimeout);
+            console.log(`Ajax timeout set to ${this.ajaxTimeout} ms`);
         }
         return newAbortController;
     }
