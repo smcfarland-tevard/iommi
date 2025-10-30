@@ -1,7 +1,7 @@
 class IommiBase {
     debug = false;
 
-    ajaxTimeout = 5000;
+    ajaxTimeout = 60000; // Changed to 60000 from 5000 to avoid timeouts for long queries
 
     historyStatePushedByUser = true;
 
